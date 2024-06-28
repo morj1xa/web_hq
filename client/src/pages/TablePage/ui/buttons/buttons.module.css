@@ -1,0 +1,128 @@
+
+.button {
+    background: #150712;
+    transition: .5s;
+}
+
+.button:is(:hover, :active, :focus) {
+    background: #882f29;
+}
+
+
+
+/* ADD BUTTON */
+
+.shapeStart {
+    display: inline-block;
+    position: relative;
+    width: 218px;
+    height: 57px;
+    background: #FF6054;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+
+    /* clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%);  */
+}
+.shapeStart .buttonSliceStart {
+    z-index: -1;
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    background: #942D2A;
+    left: 2px; /* equal to border thickness */
+    width: 214px; /* container height - (border thickness * 2) */
+    height: 53px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    transition: .5s;
+}
+
+.shapeAdd .buttonSliceAdd:is(:hover, :active, :focus) {
+    background: #882f29;
+} 
+
+/* BUTTON DEFAULT */
+
+.shape {
+    display: inline-block;
+    position: relative;
+    width: 57px;
+    height: 57px;
+    background: #FF6054;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+    clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+}
+.shape .buttonSlice {
+    z-index: -1;
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    background: #150712;
+    left: 2px; /* equal to border thickness */
+    width: 53px; /* container height - (border thickness * 2) */
+    height: 53px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+    clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+
+    transition: .5s;
+}
+
+.shape .buttonSlice:is(:hover, :active, :focus) {
+    background: #942D2A;
+} 
+
+
+
+.shapeModal .buttonSliceModal:is(:hover, :active, :focus) {
+    background: #942D2A;
+} 
+
+
+.confirmNumber {
+    opacity: .3;
+    font-weight: bold;
+
+    animation: light 1s ease-in-out ;
+
+}
+
+.confirmNumber:nth-child(1) {
+    animation-delay: 0s;
+}
+
+
+.confirmNumber:nth-child(2) {
+    animation-delay: 1s;
+}
+  
+.confirmNumber:nth-child(3) {
+    animation-delay: 2s;
+}
+  
+.confirmNumber:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.confirmNumber:nth-child(5) {
+    animation-delay: 4s;
+}
+
+@keyframes light {
+    0% {
+        opacity: .3;
+    }
+    
+    75% {
+        opacity: 1;
+        text-shadow: 0px 4px 10px #FF6054;
+    }
+
+    100% {
+        opacity: .3;
+        text-shadow: none;
+    }
+}

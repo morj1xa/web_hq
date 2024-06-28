@@ -1,0 +1,78 @@
+.modal {
+    width: 100%;
+    height: 60vh;
+    border: 2px solid #FF6054;
+    background-color: #150712;
+    font-weight: bold;
+}
+
+.title__block {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.shapeAdd {
+    display: inline-block;
+    position: relative;
+    width: 218px;
+    height: 57px;
+    background: #FF6054;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 12% 100%, 0 60%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 12% 100%, 0 60%);
+}
+.shapeAdd .buttonSliceAdd {
+    z-index: -1;
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    background: #371111;
+    left: 2px; /* equal to border thickness */
+    width: 214px; /* container height - (border thickness * 2) */
+    height: 53px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 12% 100%, 0 60%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 12% 100%, 0 60%);
+    transition: .5s;
+}
+
+.shapeAdd .buttonSliceAdd:is(:hover, :active, :focus) {
+    background: #882f29;
+} 
+
+
+.textAcive__block {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.newName__text {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+@media screen and (max-width:965px) {
+    .modal {
+        width: 516px;
+        height: 582px;
+    }
+
+    .textAcive__block {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width:550px) {
+        .modal {
+            width: 290px;
+        }
+
+        .textAcive__block {
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+        .newName__text {
+            font-size: 1.3rem;
+        }
+    }
+}

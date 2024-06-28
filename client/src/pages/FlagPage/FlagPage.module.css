@@ -1,0 +1,27 @@
+.titleBlock {
+    display: grid;
+    place-items: center;
+
+    height: 12vh;
+}
+
+@media screen and (max-height:700px) {
+    .titleBlock {
+
+        height: 25vh;
+    }
+    
+}
+
+.title {
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width:640px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}

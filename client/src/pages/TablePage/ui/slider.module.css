@@ -1,0 +1,48 @@
+.scrollSection {
+    display: flex;
+    overflow-y: scroll;
+    --webkit-overflow-scrolling: touch;
+    background-color: transparent;
+    transition: 0.5s;
+    height: 65vh;
+}
+
+.scrollSectionHead {
+    height: 10vh;
+    display: flex;
+    overflow-x: scroll;
+    --webkit-overflow-scrolling: touch;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+
+
+
+.sliderElement {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.scrollSection::-webkit-scrollbar {
+    height: 2px;
+    width: 100%;   
+}
+.scrollSection::-webkit-scrollbar-track {
+    background: none;       
+}
+
+
+.scrollSection::-webkit-scrollbar-thumb {
+    background-color: #FF6054; 
+}
+
+.scrollSectionHead::-webkit-scrollbar {
+    display: none;
+}

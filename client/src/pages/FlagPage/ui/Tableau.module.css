@@ -1,0 +1,247 @@
+.wrapper {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+
+}
+
+.line {
+    width: 100%;
+    height: 35px;
+
+    padding: 0 4rem;
+}
+
+.container {
+    max-width: 1440px;
+
+}
+
+.content {
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__block {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
+    gap: 1rem;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+
+}
+
+.header__title {
+
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-size: 3.5rem;
+}
+
+
+
+.digits__block {
+    height: 40vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.digits {
+    font-family: "Monocraft";
+    font-size: 15rem;
+}
+
+
+/* ADD BUTTON */
+
+.shapeStart {
+    display: inline-block;
+    position: relative;
+    width: 218px;
+    height: 57px;
+    background: #FF6054;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+
+    /* clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%);  */
+}
+.shapeStart .buttonSliceStart {
+    z-index: -1;
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    background: #942D2A;
+    left: 2px; /* equal to border thickness */
+    width: 214px; /* container height - (border thickness * 2) */
+    height: 53px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    clip-path: polygon(0% 0%, 78% 0%, 100% 0%, 100% 60%, 89.9% 100%, 0% 100%, 0% 60%, 0% 15%);
+    transition: .5s;
+}
+
+.shapeAdd .buttonSliceAdd:is(:hover, :active, :focus) {
+    background: #882f29;
+} 
+
+/* BUTTON DEFAULT */
+
+.shape {
+    display: inline-block;
+    position: relative;
+    width: 57px;
+    height: 57px;
+    background: #FF6054;
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+    clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+}
+.shape .buttonSlice {
+    z-index: -1;
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    background: #150712;
+    left: 2px; /* equal to border thickness */
+    width: 53px; /* container height - (border thickness * 2) */
+    height: 53px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+    clip-path: polygon(0% 0%, 83% 0%, 100% 0%, 100% 61%, 68% 100%, 0% 100%, 0% 85%, 0% 15%); 
+
+
+    transition: .5s;
+}
+
+.shape .buttonSlice:is(:hover, :active, :focus) {
+    background: #942D2A;
+} 
+
+.text_block {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    height: 12vh;
+}
+
+.footer_text {
+    display: flex;
+    gap: .8rem;
+
+    font-size: 1.2rem;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+
+    align-items: center;
+}
+
+.dot_line {
+    height: 100%;
+    width: 2px;
+}
+
+.l {
+    height: 100%;
+    width: 2px;
+    border: none;
+    border-left: 1px dashed #942D2A;
+}
+
+.btns_block {
+    height: 20vh;
+}
+
+@media screen and (max-width: 1050px) {
+    .dot_line {
+        transform: rotate(90deg);
+        
+        height: 500px;
+    }
+
+    .l {
+        width: 90%;
+        border-top: 1px dashed #942D2A;
+        height: 2px;
+    }
+
+    .content {
+        height: 150vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .digits__block {
+        height: 20vh;
+    }
+
+    .blocks_line {
+        transform: rotate(180deg);
+    }
+
+    .digits {
+        font-size: 12rem;
+    }
+
+    @media screen and (max-height: 700px) {
+        .content {
+            align-items: center;
+        }
+
+        .text_block {
+            height: 25vh;
+        }
+
+        @media screen and (max-height: 500px) {
+            .content {
+                height: 100rem;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    @media screen and (max-width:640px) {
+        .digits {
+            font-size: 8.5rem;
+        }
+
+        .dot_line {
+            transform: rotate(90deg);
+            
+            height: 400px;
+            width: 4px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:820) {
+    .footer_text {
+        font-size: .2rem;
+    }
+}
